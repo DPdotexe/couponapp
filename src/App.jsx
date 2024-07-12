@@ -49,8 +49,9 @@ function App() {
             <a href="#" className="forgot-password">Password dimenticata?</a>
           </div>
           <button onClick={handleLogin}>Procedi</button>
-          <div className="register-link">
-            Non hai un account? <a href="#">Prosegui ed effettua la registrazione</a>
+          <div className="register-button">
+            Non hai un account? Prosegui ed effettua la registrazione
+            <button>Registrati</button>
           </div>
         </div>
       ) : (

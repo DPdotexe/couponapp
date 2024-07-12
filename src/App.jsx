@@ -1,35 +1,66 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import { FaEnvelope, FaLock } from 'react-icons/fa';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [rememberMe, setRememberMe] = useState(false);
+
+  const handleLogin = () => {
+    if (email && password) {
+      setLoggedIn(true);
+    }
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="App">
+      {!loggedIn ? (
+        <div className="login">
+          <h2>Accedi utilizzando le tue credenziali</h2>
+          <div className="input-container email-container">
+            <FaEnvelope className="icon" />
+            <input 
+              type="email" 
+              placeholder="Email" 
+              value={email} 
+              onChange={(e) => setEmail(e.target.value)} 
+            />
+          </div>
+          <div className="input-container password-container">
+            <FaLock className="icon" />
+            <input 
+              type="password" 
+              placeholder="Password" 
+              value={password} 
+              onChange={(e) => setPassword(e.target.value)} 
+            />
+          </div>
+          <div className="options">
+            <label>
+              <input 
+                type="checkbox" 
+                checked={rememberMe} 
+                onChange={(e) => setRememberMe(e.target.checked)} 
+              />
+              Ricordami
+            </label>
+            <a href="#" className="forgot-password">Password dimenticata?</a>
+          </div>
+          <button onClick={handleLogin}>Procedi</button>
+          <div className="register-link">
+            Non hai un account? <a href="#">Prosegui ed effettua la registrazione</a>
+          </div>
+        </div>
+      ) : (
+        <div className="logged-in-message">
+          <h2>Benvenuto!</h2>
+          <p>Hai effettuato l'accesso con successo.</p>
+        </div>
+      )}
+    </div>
+  );
 }
 
-export default App
+export default App;

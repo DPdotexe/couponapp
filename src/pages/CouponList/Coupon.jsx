@@ -2,17 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowLeft, FaCog, FaHome, FaEnvelope, FaTicketAlt } from 'react-icons/fa';
 import './Coupon.css';
+import noImg from '../../public/images/noimg.png'; 
 
-function Coupon() {
+const Coupon = () => {
   const coupons = [
-    { id: 1, name: 'Coupon 1', description: 'Descrizione del Coupon 1', discount: '-20€', image: '/images/coupon1.jpg' },
-    { id: 2, name: 'Coupon 2', description: 'Descrizione del Coupon 2', discount: '-15€', image: '/images/coupon2.jpg' },
-    { id: 3, name: 'Coupon 3', description: 'Descrizione del Coupon 3', discount: '-10€', image: '/images/coupon3.jpg' },
-    { id: 4, name: 'Coupon 4', description: 'Descrizione del Coupon 4', discount: '-30€', image: '/images/coupon4.jpg' },
-    { id: 5, name: 'Coupon 5', description: 'Descrizione del Coupon 5', discount: '-25€', image: '/images/coupon5.jpg' },
-    { id: 6, name: 'Coupon 6', description: 'Descrizione del Coupon 6', discount: '-35€', image: '/images/coupon6.jpg' },
-    { id: 7, name: 'Coupon 7', description: 'Descrizione del Coupon 7', discount: '-18€', image: '/images/coupon7.jpg' },
-    { id: 8, name: 'Coupon 8', description: 'Descrizione del Coupon 8', discount: '-12€', image: '/images/coupon8.jpg' },
+    { id: 1, name: 'Coupon 1', description: 'Descrizione del Coupon 1', discount: '-20€', image: noImg },
+    { id: 2, name: 'Coupon 2', description: 'Descrizione del Coupon 2', discount: '-15€', image: noImg },
+    { id: 3, name: 'Coupon 3', description: 'Descrizione del Coupon 3', discount: '-10€', image: noImg },
+    { id: 4, name: 'Coupon 4', description: 'Descrizione del Coupon 4', discount: '-30€', image: noImg },
+    { id: 5, name: 'Coupon 5', description: 'Descrizione del Coupon 5', discount: '-25€', image: noImg },
+    { id: 6, name: 'Coupon 6', description: 'Descrizione del Coupon 6', discount: '-35€', image: noImg },
+    { id: 7, name: 'Coupon 7', description: 'Descrizione del Coupon 7', discount: '-18€', image: noImg },
+    { id: 8, name: 'Coupon 8', description: 'Descrizione del Coupon 8', discount: '-12€', image: noImg },
   ];
 
   const handleMenuClick = (menuItem) => {
@@ -43,7 +44,7 @@ function Coupon() {
         </button>
         <button onClick={() => handleMenuClick('Menu 2')}>
           <FaTicketAlt className="icon" />
-        </button>      
+        </button>
         <button onClick={() => handleMenuClick('Menu 3')}>
           <FaEnvelope className="icon" />
         </button>
@@ -53,6 +54,6 @@ function Coupon() {
       </div>
     </div>
   );
-}
+};
 
 export default Coupon;

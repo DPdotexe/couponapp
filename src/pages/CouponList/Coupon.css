@@ -1,12 +1,14 @@
-/* stile container coupon */
+/* stile coupon */
 .coupon-list {
-  margin: 20px;
+  margin: 80px auto 20px; 
   background: #018ed4;
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 600px;
   width: 100%;
+  padding-top: 30px;
+  margin-top: 240px;
 }
 
 .coupon-list h2 {
@@ -16,15 +18,16 @@
 
 .coupon-list ul {
   list-style-type: none;
-  padding: 0;
+  padding: 10px 0;
+  margin-top: 10px;
 }
 
 .coupon-item {
   position: relative;
   padding: 20px;
   border-radius: 5px;
-  background-color: #fff; 
-  margin-bottom: 10px; 
+  background-color: #fff;
+  margin-bottom: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -52,7 +55,7 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: #0056b3; 
+  background-color: #0056b3;
   color: white;
   font-weight: bold;
   padding: 5px 10px;
@@ -95,6 +98,8 @@
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  margin-top: 5px;
+  padding: 10px; 
   color: white;
   text-decoration: none;
   font-size: 14px;
@@ -103,4 +108,61 @@
 .back-link:hover {
   text-decoration: underline;
   color: #0056b3;
+}
+
+/* responsive */
+@media only screen and (max-width: 1200px) {
+  .coupon-list {
+    max-width: 500px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .coupon-list {
+    padding: 15px;
+  }
+
+  .coupon-item {
+    padding: 15px;
+  }
+
+  .back-link {
+    margin-top: 40px; 
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .coupon-list {
+    padding: 10px;
+  }
+
+  .coupon-item {
+    padding: 10px;
+  }
+
+  .back-link {
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .coupon-list {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .back-link {
+    margin-top: 20px; 
+  }
+}
+
+@media only screen and (max-width: 374px) {
+  .coupon-list,
+  .coupon-item {
+    padding: 10px;
+  }
+
+  .back-link {
+    margin-top: 5px; 
+  }
 }

@@ -4,7 +4,10 @@ import { FaArrowLeft, FaCog, FaHome, FaEnvelope, FaTicketAlt } from 'react-icons
 import './Coupon.css';
 import noImg from '../../public/images/noimg.png'; 
 
+
+
 const Coupon = () => {
+
   const coupons = [
     { id: 1, name: 'Coupon 1', description: 'Descrizione del Coupon 1', discount: '-20€', image: noImg },
     { id: 2, name: 'Coupon 2', description: 'Descrizione del Coupon 2', discount: '-15€', image: noImg },
